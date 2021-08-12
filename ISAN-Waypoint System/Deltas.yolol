@@ -1,0 +1,5 @@
+lx=0 ly=0 lz=0
+dx=:XX-lx lx=:XX  dy=:YY-ly ly=:YY  dz=:ZZ-lz lz=:ZZ
+if dx==0+dy==0+dz==0 then :Deltas = "\nNot Moving" goto2 end
+if x<5 then x++ goto 4 else x=0 end
+:Deltas = "\ndx="+dx+"\ndy="+dy+"\ndz="+dz goto 2
