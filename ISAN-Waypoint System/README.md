@@ -1,4 +1,5 @@
 This is the ISAN system from the Collective, modified to work with my waypoint system.
+##### Thanks to the creators of ISAN for it and the support of the string to integer parsing system
 
 # Getting Started
 You can install all or part of this system.  The ISAN.yolol is the same as the one found at https://isan.to/isan.pdf except it has been modified for Mono mode accuracry (p0=0), speed indication (s0=0) and memory chip storage of X, Y and Z (change XX, YY, ZZ to :XX, :YY, :ZZ)
