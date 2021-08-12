@@ -15,7 +15,7 @@ You can install all or part of this system.  The ISAN.yolol is the same as the o
 
 #### Setup Instructions
 1. Install all chips for desired level of system.  Be sure to bolt them in where appropriate.  Remember Memory chips only go in one way and can vanish if not inserted properly.
-2. Install ISAN per https://isan.to/isan.pdf on an Advanced chip (basic if not using speed). The Waypoint system doesnt care if you are mono or quad mode, nor if you use speed or not.  If mono mode, recommend p0=0 to turn on precision.  You must change XX, YY and ZZ to :XX, :YY, :ZZ.  The isan.yolol in this folder is already modified. (Display and Reciever fields should be updated as shown in the PDF)
+2. Install ISAN per https://isan.to/isan.pdf on an Advanced chip (basic if not using speed). The Waypoint system doesnt care if you are mono or quad mode, nor if you use speed or not.  If mono mode, recommend p0=0 to turn on precision.  You must change XX, YY and ZZ to :XX, :YY, :ZZ.  The isan.yolol in this folder is already modified. (Display and Reciever fields should be updated as shown in the PDF) ![ISAN-SCREEN](images/ISANScreen.jpg)
 3. Install Memory Chip 1.  On the chip, set the following fields: XX, YY, ZZ, wx, wy, wz, wpc, wpnum.  (this leaves 2 unused values)
 4. (OPTIONAL) Install Deltas.yolol on basic chip.  On a Text Screen, rename PanelValue field name to Deltas.  When moving, this will show your current delta X, Y and Z.
 5. Install Memory Chip 2.  On the chip, set the fields to: wp1 to wp10.  Set the values to "1 1 1" unless you have specific waypoints you want to put in.
@@ -24,7 +24,7 @@ You can install all or part of this system.  The ISAN.yolol is the same as the o
 8. (OPTIONAL) Install progress bar near warning buttons if needed to show currently selected waypoint. Name PanelValue to wpnum.  Minvalue 0, maxvalue 10.
 
 #### Usage Instructions
-1. During normal flight, the ISAN screen will show you current X, Y and Z and Speed if s0=0.  Note: ISAN speed is unreliable and generally low.  Usage is your choice.  The Deltas screen will show you your current X, Y and Z deltas based on current flight direction and speed.  (You can see what X, Y and Z are in the ISAN PDF).  The DTW screen will show currently selected waypoint, distance to it, and delta X, Y and Z to it.
+1. During normal flight, the ISAN screen will show you current X, Y and Z and Speed if s0=0.  Note: ISAN speed is unreliable and generally low.  Usage is your choice.  The Deltas screen will show you your current X, Y and Z deltas based on current flight direction and speed.  (You can see what X, Y and Z are in the ISAN PDF).  The DTW screen will show currently selected waypoint, distance to it, and delta X, Y and Z to it. 
 2. To fly to your waypoint, if DTW says you are -500X you would want to fly plus X, etc.  No automation at this time.
 ##### IMPORTANT: When using the Waypoint buttons, press them one time, wait for blinking to stop before pressing another.  DTW display will show PARSING WAYPIONT while its changing over.
 3. To raise or lower current waypoint, press the Increment or Decrement warning button.  It wraps from 10 to 1 and 1 to 10.  Wait for blinking to stop and its set.
