@@ -21,6 +21,7 @@ You can install all or part of this system.  The ISAN.yolol is the same as the o
 5. Install Memory Chip 2.  On the chip, set the fields to: wp1 to wp10.  Set the values to "1 1 1" unless you have specific waypoints you want to put in.
 6. Install DTW.yolol on an advanced chip.  On a text screen, rename PanelValue field name to DTW.  This will display Waypoint Number, Distance, and delta X, Y, Z to it.
 7. Install WPIncrement.yolol on an advanced chip. Install 4 warning buttons. Rename ButtonState field names to wpi, wpd, wps, wph.  (Increment, Decrement, Save, Home).  Rename all ButtonEnableBlink fields to wpb.  ButtonStyle should be 1.  ButtonColor is user preference, i use Red(0) for decrement, Green(2) for increment, Blue(3) for Save, and Orange(1) for Home.
+8. (OPTIONAL) Install progress bar near warning buttons if needed to show currently selected waypoint. Name PanelValue to wpnum.  Minvalue 0, maxvalue 10.
 
 #### Usage Instructions
 1. During normal flight, the ISAN screen will show you current X, Y and Z and Speed if s0=0.  Note: ISAN speed is unreliable and generally low.  Usage is your choice.  The Deltas screen will show you your current X, Y and Z deltas based on current flight direction and speed.  (You can see what X, Y and Z are in the ISAN PDF).  The DTW screen will show currently selected waypoint, distance to it, and delta X, Y and Z to it.
