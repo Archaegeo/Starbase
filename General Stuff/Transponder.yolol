@@ -1,0 +1,9 @@
+i=:insideSafeZone
+:BeaconWarn=:Beacon*(not i)
+ifi then:TBC=2 a=0else:TBC=0 a=1end
+if(not b)*a then:Beacon=0 b=1end
+if(not a)*b thena=0end goto1
+
+// BeaconWarn, warning button first field name
+// TBC, warning button, Button Color field name
+// Beacon, transponder button and transponder first field name

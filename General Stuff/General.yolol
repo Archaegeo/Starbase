@@ -1,0 +1,11 @@
+b=0 a=0 m=0
+if:Approach or :Laser thenm=1elsem=0end
+fr=2*(100-:Battery/100)+50*m :FR1=fr*1.5 :FR2=fr :FR3=fr*0.5
+if:door and not :cruise and :FcuForward>0then:door=0end
+:approachFlash=:approach and :RangeAhead<500
+if:Battery>9999thenb++elseb=0end ifb>300then:Collect=0end
+i=:TSZ
+:BeaconWarn=:Beacon*(not i)
+ifi then:TBC=2 a=0else:TBC=0 a=1end
+if(not b)*a then:Beacon=0 b=1end
+if(not a)*b thena=0end goto2

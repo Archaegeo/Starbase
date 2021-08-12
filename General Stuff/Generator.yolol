@@ -1,0 +1,7 @@
+if :MLOS then :GLM=65 goto1 end
+if :B<10000 then :GLM=(100-:B/100) else :GLM=0 end goto1
+
+
+fr=2*(100-:Battery/100)+(50*:Collect) :FR1=fr*1.5 :FR2=fr :FR3=fr*0.5
+f=0 if:F1<:F2 then if:F1<:F3 then f=:F1 else f=:F3 end else f=:F2 end
+iff>:F3 then f=:F3 end :FuelRod=f

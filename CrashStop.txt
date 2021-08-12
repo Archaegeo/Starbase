@@ -1,0 +1,6 @@
+• Steam overlay: off 
+• Run steam in admin mode 
+• Set the game to run in admin mode 
+• Steam > In-game > Server browser pings / minute: 3000 
+• Steam > In-game > Steam Netoworking: Never 
+• In-game settings > audio > Music: 0 / Other music: 0

@@ -1,0 +1,8 @@
+// Durability Monitor - :Info = screen name :DurabilityErrors-screen
+tm=20 if :Info=="" AND :DurabilityErrors>0 then goto2 else end goto1
+:Info="\nDurability Error!"
+if td==tm then td=0 goto4 else td++ end goto3
+:Info="\nRe-\ndistribute the heavy ore in the storage."
+if td==tm then td=0 goto6 else td++ end goto5
+:Info="\nOr check the ship for damage."
+if td==tm then td=0 :Info="" goto2 else td++ end goto7
