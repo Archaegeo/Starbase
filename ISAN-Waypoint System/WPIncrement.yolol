@@ -1,18 +1,15 @@
-i=:wpi d=:wpd s=:wps h=:wph n=:wpnum
-if(not i) and not d and not s and not h thengoto1end
-ifs thengoto5end ifh then n=1 end ifi thenn++end ifd thenn--end
-ifn<1thenn=10end ifn>10thenn=1end
-x=:XX y=:YY z=:ZZ x-=(x%1) y-=(y%1) z-=(z%1)
-ifs thenwps=""+x+" "+y+" "+z end
-ifn==1thenifs then:wp1=wps end :wpc=:wp1 goto17 end 
-ifn==2thenifs then:wp2=wps end :wpc=:wp2 goto17 end 
-ifn==3thenifs then:wp3=wps end :wpc=:wp3 goto17 end
-ifn==4thenifs then:wp4=wps end :wpc=:wp4 goto17 end
-ifn==5thenifs then:wp5=wps end :wpc=:wp5 goto17 end
-ifn==6thenifs then:wp6=wps end :wpc=:wp6 goto17 end
-ifn==7thenifs then:wp7=wps end :wpc=:wp7 goto17 end
-ifn==8thenifs then:wp8=wps end :wpc=:wp8 goto17 end
-ifn==9thenifs then:wp9=wps end :wpc=:wp9 goto17 end
-ifn==10thenifs then:wp10=wps end :wpc=:wp10 end
-:wpb=1 :wpnum=n
-if:wpb thengoto18end goto1
+i=:wpi d=:wpd s=:wps h=:wph n=:wpnum+3 k=1000 a=10 goto 1+(i+d+s+h)>0
+n+=(4-n)*h+i-d  n+=a*(n<4)-a*(n>13) if s==0 then goto n end
+wps=:xx/k*k+" "+:yy/k*k+" "+:zz/k*k goto n
+if s then :wp1=wps end :wpc=:wp1 goto 14
+if s then :wp2=wps end :wpc=:wp2 goto 14
+if s then :wp3=wps end :wpc=:wp3 goto 14
+if s then :wp4=wps end :wpc=:wp4 goto 14
+if s then :wp5=wps end :wpc=:wp5 goto 14
+if s then :wp6=wps end :wpc=:wp6 goto 14
+if s then :wp7=wps end :wpc=:wp7 goto 14
+if s then :wp8=wps end :wpc=:wp8 goto 14
+if s then :wp9=wps end :wpc=:wp9 goto 14
+if s then :wp10=wps end :wpc=:wp10 goto 14
+:wpb=1 :wpnum=n-3
+if:wpb thengoto15end goto1
