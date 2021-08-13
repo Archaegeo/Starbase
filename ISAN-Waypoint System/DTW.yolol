@@ -8,5 +8,5 @@ v=1 ifc=="-"thenv=-1 ifa!=""thena--endend i++ j=-1
 x1=:XX x2=:WX y1=:YY y2=:WY z1=:ZZ z2=:wz dx=x1-x2 dy=y1-y2 dz=z1-z2
 dx-=dx%1 dy-=dy%1 dz-=dz%1 x=dx^2 y=dy^2 z=dz^2 d=sqrt(x+y+z)
 ifd>k/10thend/=k d*=100 d+=" km"elsed-=d%1 d+=" m"end
-:DTW=" WP: "+wpn+b+d+b+b+"dX: "+dx+b+"dY: "+dy+b+"dZ: "+dz
+:DTW="WP: "+wpn+b+d+b+b+"dX: "+dx+b+"dY: "+dy+b+"dZ: "+dz
 if:wpb thengoto1end goto8
