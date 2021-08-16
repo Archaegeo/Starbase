@@ -6,7 +6,7 @@ You can install all or part of this system.  The ISAN.yolol is the same as the o
 #### Materials List for whole system
 * Advanced YOLOL Chip - ISAN.yolol script, can use basic if speed not desired (s0=1)
 * Advanded YOLOL Chip - DTW.yolol script, needed for the use of sqrt and modulus(%).
-* Advanced YOLOL Chip - WPIncrement.yolol script, needed for use of modulus(%).
+* Basic YOLOL Chip - WPIncrement.yolol script, needed for use of modulus(%).
 * (OPTIONAL) Basic YOLOL Chip - Deltas.yolol, needed if display of current deltas is desired.
 * 2 YOLOL Memory Chips - One for storing XX, YY, ZZ and current WP X, Y, Z, and current WP Number.  One for storing up to 10 waypoints
 * 4 Warning Buttons - Used for WP Increment, WP Decrement, WP Save, and WP Home Select.
