@@ -1,0 +1,9 @@
+if:AlarmOveride==1then:SoundOn=0 :RedLight=0 goto1 end
+if:FuelCheck<500thenalarm=1 :SndT=4 :SoundOn=1 goto4 else alarm=0 end
+if:Propellant<500thenalarm=1 :SndT=6 :SoundOn=1 goto4 else alarm=0 end
+if alarm!=1 then :SoundOn=0 :RedLight=0 goto 1 end
+RedLight=1-:Redlight goto1
+
+// This replaces the 2 individual alarm chips.
+// Also change priority on the sound device above seat to 1 and
+// radius to 50.

@@ -1,0 +1,10 @@
+i=:insideSafeZone :Safezone_B=1
+if i then :Safe_C=2 else :Safe_C=1 end
+if i then :Tran_C=2 a=0 else :Tran_C=1 a=1 end
+if(not b)*a then :transponder=0 b=1 end
+if(not a)*b then a=0 end goto1
+
+// No new button names.  Auto turns off transponder if cross into
+// unsafe.  Sets the rectangular button colors based on unsafe.
+// will allow transponder to be turned back on manually if desired
+// in unsave.

@@ -1,0 +1,8 @@
+if :BTCP<-15+:BTCP:>0 then :PChk=0 end if :Mine then :turtle=10 end
+if (:LTCP!=-5+:RTCP!=-5)*:PChk!=0 then :PChk=0 else :PChk=1 end
+if :Mine then :turtle=10 end goto 1
+
+// :BTCP is bottom turret current pitch, :LTCP and :RTCP are for 
+// top turrets.  :Mine is mine button, :turtle is turtle button
+// :PChk is store on memory chip (or other device)
+// This, positioning and Control mining chips replace the original.

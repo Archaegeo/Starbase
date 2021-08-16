@@ -1,0 +1,7 @@
+t=0 timer=40 if :Battery < 2000 then goto4 end
+if :R_Door+:L_Door then goto3 end goto1
+if t<timer then t++ goto 3 else :R_Door=0 :L_Door=0 goto1 end
+:R_Door=1 :L_Door=1 :ENGDoor=1 goto1
+
+// This replaces the door chip.  Set timer to how long you want
+// doors to stay open before closing.

@@ -1,0 +1,10 @@
+if:Mine*:PChk then:MLT=1-:MLT :CL=1-:CL goto1else :MLT=0 :CL=:COLL end
+if:PChk==0 then :RTP=-5 :LTP=-5 :BTP=-10 end goto 1
+
+// :Mine is mining button, :Pchk is on a memory chip or other device
+// :MLT is the first field on all lasers.  :CL is first on collectors
+// :COLL is collector button.
+// :RTP, :LTP, :BTP is the first field on the pitch of the turrets
+// for right, left and bottom lasers.
+
+// This, Safety and positioning mining chips replace the original.

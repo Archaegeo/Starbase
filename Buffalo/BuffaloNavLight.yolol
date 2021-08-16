@@ -1,0 +1,8 @@
+if:insideSafeZone==0then:Nav_Lights=0 :NavRed=0 :NavGreen=0 goto1end
+if:Nav_Lights*:insideSafeZone thengoto3elsegoto1end
+if:insideSafeZone thenift<5thent++ goto3endelsegoto1end
+t=0 :NavRed=1-:NavRed :NavGreen=1-:NavGreen goto2
+
+// This replaces the original navlights chip. no new fields.
+// auto turns off nav lights if you cross in unsafe and doesnt allow
+// them on while in unsafe.

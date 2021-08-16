@@ -1,4 +1,4 @@
-Ai=1000 w=1000 po=0 so=0 COLLECTIVE+=ISAN sv=(1-so)*18 ds=so sq=0.5
+Ai=1000 w=1000 po=0 so=1 COLLECTIVE+=ISAN sv=(1-so)*18 ds=so sq=0.5
 z="origin_" a=z+"north" f=z+"south" g=z+"east" z+="west" ms=""
 up=" POS :_\n " :at=a :bt=f :ct=g :dt=z :_=up+"\nBooting\nISAN"
 ri=:_ mx=up+"Q\nX: " my="\nY: " mz="\nZ: " ss="" x/=so-1 ms="\n\nS: "

@@ -1,7 +1,9 @@
-b="\n" if:Scanner thengoto3elsegoto2end
-:Scanning="Scanner Offline" goto1
+b="\n" c=" Ore"
+if:Scanner thengoto3else:Scanning="Scanner Offline" goto2end
+:Scan=1 :index=0 V1=:Volume/1728 L1=:Material-c+b+V1
+:index=1 V2=:Volume/1728 L2=b+:Material-c+b+V2
+P=V2/V1*100 :Scanning=b+L1+L2+b+b+P+"%"+c goto1
 
-:Scan=1 :index=0 V1=:Volume/1728 L1=:Material-" Ore"+b+V1
-:index=1 V2=:Volume/1728 L2="\n"+:Material-" Ore"+b+V2
-P=(V2/V1)*100 :Scanning=b+L1+L2+b+b+P+"% Ore" goto1
+//Scanner is button and name of material scanner, 
+//Scanning is text display
 
