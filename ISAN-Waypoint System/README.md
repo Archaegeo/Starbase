@@ -6,7 +6,7 @@ Version 2.0 - ISAN + Waypoint + Heading
 This is the ISAN system from the Collective. 
 ![Coordinates](images/Coordinates.jpg)
 
-It has modified to work with my waypoint system and adding in heading and pitch.  The system will store up to 16 waypoints, cycle up and down (wrapping at the ends) and has a overwrite and home feature (goes to wp1).
+It has modified to work with my waypoint system and adding in heading and pitch from LizardFish.  The system will store up to 16 waypoints, cycle up and down (wrapping at the ends) and has a overwrite and home feature (goes to wp1).
 
 "Pitch is your "vertical" angle from the Z axis with 0 being flat along the plane of the belt, and -90 and 90 being perpendicular.
 Heading is your "horizontal" angle from the Z axis with 0 being along it pointing into the belt, 90 being along the X axis pointing "left" along the belt, and it wrapping back around to 360 pointing back into the belt"
