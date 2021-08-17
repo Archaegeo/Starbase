@@ -1,8 +1,8 @@
-if :Static+:Mine==0 then :LTY=20 :RTY=-20 :BTP=-10 goto1 end
+if:Static+:Mine==0then:LTY=20 :RTY=-20 :BTP=-10 goto1end
 ift<10thenif:Mine*1-:Static thent++ goto2elsegoto1endend t=0
-if:LTY==20then:LTY=40 :RTY=-40 :BTP=-15 goto1 end
-if:LTY==40then:LTY=0 :RTY=0 :BTP=-5 goto 1 end
-if:LTY==0then:LTY=40 :RTY=-40 :BTP=-15 goto 1 end
+if:LTY==20then:LTY=40 :RTY=-40 :BTP=-15 goto1end
+if:LTY==40then:LTY=0 :RTY=0 :BTP=-5 goto1end
+if:LTY==0then:LTY=40 :RTY=-40 :BTP=-15 goto1end
 
 // :LTY and :RTY are left and right upper turret rotation
 // :BTP is bottom turret pitch.  :Mine is mining button
