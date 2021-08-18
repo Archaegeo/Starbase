@@ -1,5 +1,5 @@
 lx=0 ly=0 lz=0 k=100 b="\n"
-x=:xx y=:yy z=:zz dx=x-lx lx=x dy=y-ly ly=y dz=z-lz lz=z
+x=:x y=:y z=:z dx=x-lx lx=x dy=y-ly ly=y dz=z-lz lz=z
 ifdx==0+dy==0+dz==0then:Deltas="\nNot Moving" goto2end
 wx=x-:wx wy=y-:wy wz=z-:wz adx="Opening" ady="Opening" adz="Opening"
 if(wx>0)*(dx<0)+(wx<0)*(dx>0)thenadx="Closing"end
