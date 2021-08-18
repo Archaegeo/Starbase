@@ -1,5 +1,5 @@
-A=1000 n=1000 pr=0 sp=0 div=10.4+2.4*pr so=1-sp o=160000 c=50
-z="origin_" mr=z+"north" br=z+"south" cr=z+"east" z+="west" sm="\nS: " 
+A=1000 n=1000 pr=1 sp=1 div=10.4+2.4*pr so=1-sp o=160000 c=50
+z="origin_" mr=z+"north" br=z+"south" cr=z+"east" z+="west" sm="\nS: "
 u=295384.615 k=-202105.263 l=-218947.368 mm=2*o e=8*o x/=so sm="" s=""
 rr="ISAN2 :_\n     " xm="\nX: " ym="\nY: " zm="\nZ: " nn=1386666.667 
 ej=16*sp h="Q" pj=14-pr b=0.5 p=1000000 :at=mr :bt=br :ct=cr :dt=z x=0 
