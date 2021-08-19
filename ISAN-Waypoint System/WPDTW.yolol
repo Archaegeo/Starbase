@@ -9,7 +9,7 @@ dx-=dx%1 dy-=dy%1 dz-=dz%1 x=dx^2 y=dy^2 z=dz^2 d=sqrt(x+y+z) ds=d
 ifds>k/10thends/=k ds*=100 ds+=" km"elseds-=ds%1 ds+=" m"end
 d1=180/3.142 s2=sqrt 0.5 //written by LizardFish
 xz=sqrt(dx^2+dz^2) q=abs(dx/xz) r=xz/d
-b1=-dx/d s1=-dy/xz p=(b1<s2)*(b1>-s2)*d1*(b1+b1^3/6)
+b1=-dy/d s1=-dz/xz p=(b1<s2)*(b1>-s2)*d1*(b1+b1^3/6)
 p+=(r<s2)*((dy<=0)*(90-d1*(r+r^3/6))+(dy>0)*(d1*(r+r^3/6)-90))
 h=(q<=s2)*((dz<=0)*(d1*(q+q^3/6))+(dz>0)*(180-d1*(q+q^3/6)))
 h+=(s1<s2)*(s1>-s2)*(90-d1*(s1+s1^3/6))
