@@ -1,4 +1,0 @@
-if :tcpl!=-10+:tcpr!=10 then:lR=0 :lL=0 :tcl=-10 :tcr=10 goto1 end
-if :laser == 0 then goto 2 end :Cruise=100 :collect=1
-:lR=0 :lL=1 if :laser==0 then goto 1 end
-:lR=1 :lL=0 if :laser==0 then goto 1 end goto 3

@@ -1,8 +1,0 @@
-if :MLOS then :MLO=1 goto2 else goto1 end
-
-
-
-:MLO=0 goto1
-
-if :tcpl!=-10+:tcpr!=10 then:lR=0 :lL=0 :tcpl=-10 :tcpr=10 goto1 end
-
