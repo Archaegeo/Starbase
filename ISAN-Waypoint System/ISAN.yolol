@@ -15,6 +15,6 @@ x+=(6-x)*(x<8) :x=(t+i)/e+g/u+f/k :y=t/l+i/mm+(g+f)/nn :z=(g+f-t-i)/o
 st=:_=="" :_=rr+h+xm+:x/n*A+ym+:y/n*A+zm+:z/n*A+sm+s goto ej+x*so+p*st
 w+=:x uu+=:y vv+=:z r=w-tu j=uu-uv v=vv-vt ej+=(ii++%3)>1 gotox
 m=(r*r+j*j+v*v)^b s=m/div tu=w uv=uu vt=vv w=0 uu=0 vv=0 ej=16 
-:i=r :j=j :k=v :l=m gotox
-:e="not in motion" goto x
+:i=r :j=j :k=v :l=m :spd=s gotox
+:e="not in motion" :spd=0 goto x
 st=:_!="" :_=rr+"\n\n   ISAN2\n  OFFLINE" goto 20*st

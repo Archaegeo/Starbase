@@ -1,10 +1,14 @@
-if:Static+:Mine==0then:LTY=20 :RTY=-20 :BTP=-10 goto1end
-ift<10thenif:Mine*1-:Static thent++ goto2elsegoto1endend t=0
-if:LTY==20then:LTY=40 :RTY=-40 :BTP=-15 goto1end
-if:LTY==40then:LTY=0 :RTY=0 :BTP=-5 goto1end
-if:LTY==0then:LTY=40 :RTY=-40 :BTP=-15 goto1end
+if:Static+:Mine==0thengoto6end
+if:Static thengoto6end if(:LTCR==18.75)*(:LTCP==-7)thengoto7end
+if:Static thengoto6end if(:LTCR==22.5)*(:LTCP==-3.5)thengoto8end
+if:Static thengoto6end if(:LTCR==15.25)*(:LTCP==-10.5)thengoto7end
+goto2
+:LTP=-7 :RTP=-7 :LTR=18.75 :RTR=-18.75 :BTP=-7 goto1 //Default
+:LTP=-3.5 :RTP=-3.5 :LTR=22.5 :RTR=-22.5 :BTP=-12 goto1 //Pos1
+:LTP=-10.5 :RTP=-10.5 :LTR=15.25 :RTR=-15.25 :BTP=-5 goto1 //Pos2
 
 // :LTY and :RTY are left and right upper turret rotation
 // :BTP is bottom turret pitch.  :Mine is mining button
 // :Static is static button (so they dont move)
+// :LTCP/LTCR are current pitch and rotation of left turret
 // This, Safety and Control mining chips replace the original.

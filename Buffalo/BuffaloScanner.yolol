@@ -1,6 +1,6 @@
 b="\n" o=" Ore" c=" Crystal" k=100 s=" Stacks"
-if:Scanner then:Scn=b+"Scanning..." :Scan=1 goto3end goto2
-if:Scanner thenif:Scan==1thengoto3endelse:Scn="Offline" goto2end
+:reset=1 if:Scanner then:Scn=b+"Scanning..." :Scan=1 goto3end goto2
+if:Scanner thenif:Scan thengoto3endelse:Scn="Offline" goto2end
 :i=0 if:V==0then:Scn=b+"No Contact" goto2end
 V1=:V/1728 V=(V1+0.05)/k*k L1=:M-o-c+b+V+s
 :i=1 V2=:V/1728 V=(V2+0.05)/k*k L2=b+:M-o-c+b+V+s

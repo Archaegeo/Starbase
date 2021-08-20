@@ -1,0 +1,6 @@
+h=15 Kp=0.35 Ki=0 Kd=4 p=0 i=0 l=10 t=3 goto1+:Approach>0
+r=:RFD e=r-h d=e-p i+=p s=i>l-i<-l i+=s*(l-s*i) o=Kp*e+Ki*i+Kd*d p=e
+z/=(r>0)*(r<1000)*(d!=0+e*e>1) :FcuForward=o/t :FcuBackward=-o*t goto2
+:Approach=0 :FcuForward=0 :FcuBackward=0 goto1
+//Credit to the PID folks and Whitestrake
+//The default kp, kd, and t should be safe for most ships.

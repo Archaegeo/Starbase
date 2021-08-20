@@ -1,6 +1,6 @@
-i=:wpi d=:wpd s=:wps h=:wph n=:wpnum+3 k=1000 a=16 goto1+(i+d+s+h)>0
-n+=(4-n)*h+i-d n+=a*(n<4)-a*(n>(a+3)) ifs==0thengoton end
-wps=:x/k*k+" "+:y/k*k+" "+:z/k*k goton
+i=:wpi d=:wpd s=:wps h=:wph n=:wpnum+3 goto1+(i+d+s+h)>0
+a=16 n+=(4-n)*h+i-d n+=a*(n<4)-a*(n>(a+3)) ifs==0thengoton end
+k=1000 wps=:x/k*k+" "+:y/k*k+" "+:z/k*k goton
 ifs then:wp1=wps end :wpc=:wp1 :wpb=1 :wpnum=n-3 goto20
 ifs then:wp2=wps end :wpc=:wp2 :wpb=1 :wpnum=n-3 goto20
 ifs then:wp3=wps end :wpc=:wp3 :wpb=1 :wpnum=n-3 goto20

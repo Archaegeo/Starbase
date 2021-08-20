@@ -1,7 +1,8 @@
-if :BTCP<-15+:BTCP:>0 then :PChk=0 end if :Mine then :turtle=10 end
-if (:LTCP!=-5+:RTCP!=-5)*:PChk!=0 then :PChk=0 else :PChk=1 end
-if :Mine then :turtle=10 end goto 1
-
+PPchk=(:BTCP>=-15)*(:BTCP<=0)*(:LTCP>=-12)*(:RTCP>=-12)
+Rchk=(:LTCR<=25)*(:LTCR>=0)*(:RTCR<=0)*(:RTCR>=-25)
+:Pchk=(PPchk*Rchk) b="\n" Ang=b+"B:"+:BTCR+" "+:BTCP+b
+:Ang=Ang+"L:"+:LTCR+" "+:LTCP+b+"R:"+:RTCR+" "+:RTCP+b+"Pchk:"+:Pchk
+if:Mine then:turtle=10end goto1
 // :BTCP is bottom turret current pitch, :LTCP and :RTCP are for 
 // top turrets.  :Mine is mine button, :turtle is turtle button
 // :PChk is store on memory chip (or other device)
