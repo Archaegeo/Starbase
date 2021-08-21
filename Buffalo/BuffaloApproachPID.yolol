@@ -1,7 +1,5 @@
-h=15 Kp=0.43 Ki=0 Kd=6 p=0 i=0 l=10 t=1 goto1+:Approach>0
-r=:RFD e=r-h d=e-p i+=p s=i>l-i<-l i+=s*(l-s*i) o=Kp*e+Ki*i+Kd*d p=e
-z/=(r>0)*(r<1000)*(d!=0+e*e>1) :FcuForward=o/t :FcuBackward=-o*t goto2
+s=10 Kp=1.5 Ki=0.01 Kd=18 t=1.5 m=1000 g=0.001 p=0 goto1+:Approach>0
+r=:RFD e=r-s d=e-p i+=e/(d-g) i/=2 o=Kp*e+Ki*i+Kd*d p=e a=:Approach
+z/=a*r*(r<m)*(d*d>g+e*e>1) :FcuForward=o/t :FcuBackward=-o*t goto2
 :Approach=0 :FcuForward=0 :FcuBackward=0 goto1
-//Credit to the PID folks and Whitestrake
-//The KP, ID and T numbers are for Buffalo with ALL REVERSE engines
-//acting as FCUBackwards.
+

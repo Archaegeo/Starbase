@@ -1,11 +1,12 @@
 if:Static+:Mine==0thengoto6end
 if:Static thengoto6end if(:LTCR==18.75)*(:LTCP==-7)thengoto7end
-if:Static thengoto6end if(:LTCR==22.5)*(:LTCP==-3.5)thengoto8end
-if:Static thengoto6end if(:LTCR==15.25)*(:LTCP==-10.5)thengoto7end
-goto2
+if:Static thengoto6end if(:LTCR==18.75)*(:LTCP==-14)thengoto8end
+if:Static thengoto6end if(:LTCR==18.75)*(:LTCP==0)thengoto7end
+goto 2
 :LTP=-7 :RTP=-7 :LTR=18.75 :RTR=-18.75 :BTP=-7 goto1 //Default
-:LTP=-3.5 :RTP=-3.5 :LTR=22.5 :RTR=-22.5 :BTP=-12 goto1 //Pos1
-:LTP=-10.5 :RTP=-10.5 :LTR=15.25 :RTR=-15.25 :BTP=-5 goto1 //Pos2
+:LTP=-14 :RTP=-14 :LTR=18.75 :RTR=-18.75 :BTP=0 goto3 //Pos1
+:LTP=0 :RTP=0 :LTR=18.75 :RTR=-18.75 :BTP=-14 goto4 //Pos2
+
 
 // :LTY and :RTY are left and right upper turret rotation
 // :BTP is bottom turret pitch.  :Mine is mining button
