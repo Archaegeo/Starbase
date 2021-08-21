@@ -4,3 +4,5 @@ z/=(r>0)*(r<1000)*(d!=0+e*e>1) :FcuForward=o/t :FcuBackward=-o*t goto2
 :Approach=0 :FcuForward=0 :FcuBackward=0 goto1
 //Credit to the PID folks and Whitestrake
 //The default kp, kd, and t should be safe for most ships.
+
+if :cc==0 then :cc=1 elseif :cc==1 then :cc=0 end end

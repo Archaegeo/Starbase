@@ -1,4 +1,4 @@
-h=15 Kp=0.43 Ki=0 Kd=7 p=0 i=0 l=10 t=1 goto1+:Approach>0
+h=15 Kp=0.43 Ki=0 Kd=6 p=0 i=0 l=10 t=1 goto1+:Approach>0
 r=:RFD e=r-h d=e-p i+=p s=i>l-i<-l i+=s*(l-s*i) o=Kp*e+Ki*i+Kd*d p=e
 z/=(r>0)*(r<1000)*(d!=0+e*e>1) :FcuForward=o/t :FcuBackward=-o*t goto2
 :Approach=0 :FcuForward=0 :FcuBackward=0 goto1
