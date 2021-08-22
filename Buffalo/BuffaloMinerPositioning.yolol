@@ -1,15 +1,20 @@
-if:Static+:Mine==0thengoto6end
-if:Static thengoto6end if(:LTCR==18.75)*(:LTCP==-7)thengoto7end
-if:Static thengoto6end if(:LTCR==18.75)*(:LTCP==-14)thengoto8end
-if:Static thengoto6end if(:LTCR==18.75)*(:LTCP==0)thengoto7end
-goto 2
-:LTP=-7 :RTP=-7 :LTR=18.75 :RTR=-18.75 :BTP=-7 goto1 //Default
-:LTP=-14 :RTP=-14 :LTR=18.75 :RTR=-18.75 :BTP=0 goto3 //Pos1
-:LTP=0 :RTP=0 :LTR=18.75 :RTR=-18.75 :BTP=-14 goto4 //Pos2
-
-
+if:Static+:Mine==0thengoto10end
+if:Static thengoto9end if(:LTCR==18.7)*(:LTCP==-7)thengoto11end goto2
+if:Static thengoto9end if(:LTCR==18.7)*(:LTCP==0)thengoto12end goto3
+if:Static thengoto9end if(:LTCR==18.7)*(:LTCP==-14)thengoto13end goto4
+if:Static thengoto9end if(:LTCR==6.7)*(:LTCP==-14)thengoto14end goto5
+if:Static thengoto9end if(:LTCR==6.7)*(:LTCP==0)thengoto15end goto6
+if:Static thengoto9end if(:LTCR==30.7)*(:LTCP==0)thengoto16end goto7
+if:Static thengoto9end if(:LTCR==30.7)*(:LTCP==-14)thengoto10end goto8
+goto 10
+:LTP=-7 :RTP=-7 :LTR=18.7 :RTR=-18.7 :BTR=0 :BTP=-7 goto1 //Default
+:LTP=0 :RTP=0 :BTP=-14 goto3 //Up
+:LTP=-14 :RTP=-14 :BTP=0 goto4 //Down
+:LTR=6.7 :RTR=-30.7 :BTR=12 goto5 //Left
+:LTP=0 :RTP=0 :BTP=-14 goto6 //Up
+:LTR=30.7 :RTR=-8.7 :BTR=-12 goto7 //Right
+:LTP=-14 :RTP=-14 :BTP=0 goto8//Down
 // :LTY and :RTY are left and right upper turret rotation
 // :BTP is bottom turret pitch.  :Mine is mining button
 // :Static is static button (so they dont move)
 // :LTCP/LTCR are current pitch and rotation of left turret
-// This, Safety and Control mining chips replace the original.

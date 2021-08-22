@@ -1,5 +1,5 @@
-PPchk=(:BTCP>=-15)*(:BTCP<=0)*(:LTCP>=-12)*(:RTCP>=-12)
-Rchk=(:LTCR<=25)*(:LTCR>=0)*(:RTCR<=0)*(:RTCR>=-25)
+PPchk=(:BTCP>=-17)*(:BTCP<=3)*(:LTCP>=-15)*(:RTCP>=-15)
+Rchk=(:LTCR<=40)*(:LTCR>=0)*(:RTCR<=0)*(:RTCR>=-40)
 :Pchk=(PPchk*Rchk) b="\n" Ang=b+"B:"+:BTCR+" "+:BTCP+b
 :Ang=Ang+"L:"+:LTCR+" "+:LTCP+b+"R:"+:RTCR+" "+:RTCP+b+"Pchk:"+:Pchk
 if:Mine then:turtle=10end goto1
