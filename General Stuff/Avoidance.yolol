@@ -1,26 +1,4 @@
-//CHIP-1 - Display is :Movement
-L=:FcuRightLeft<0 R=:FcuRightLeft>0 U=:FcuUpDown>0 D=:FcuUpDown<0
-JU="\n\n" SB="     " SM="  "
-:Movement=JU+SB+U+JU+SM+L+SB+R+JU+SB+D goto1
-
-//CHIP-2 - :Avoidance is button, on = 2
-D=1000 goto:Avoidance
-if :RFRD<D then :Cruise=100 :FcuRightLeft=-100 else end goto1
-
-//CHIP-3
-D=1000 goto:Avoidance
-if :RFLD<D then :Cruise=100 :FcuRightLeft=100 else end goto1
-
-//CHIP-4
-D=1000 goto:Avoidance
-if :RFDD<D then :Cruise=100 :FcuUpDown=100 else end goto1
-
-//CHIP-5
-D=1000 goto:Avoidance
-if :RFUD<D then :Cruise=100 :FcuUpDown=-100 else end goto1
-
-//CHIP-6 - AvAAdjust = lever 0 to 100 bind 5
-D=1000 goto:Avoidance
-if:RFRD<D AND:RFLD<D AND:RFDD<D AND:RFUD<D then goto3 else end goto4
-:SoundOn=1 goto1
-:Cruise=0 :Turtle=100 :FcuForward=:AvAdjust goto1
+goto :Avoid*((:US+:DS+:LS+:RS)<4000)*2
+i=2*(:DS<1000)-:US<1000 :FcuUpDown+=100*i
+i=2*(:LS<1000)-:RS<1000 :FcuRightLeft+=100*i goto (i==0)*4
+:FcuUpDown=0 :FcuRightLeft=0 goto1

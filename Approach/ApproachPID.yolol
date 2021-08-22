@@ -1,4 +1,4 @@
-s=17 Kp=0.22 Ki=0.01 Kd=4 t=1 m=1000 g=0.001 p=0 goto1+:Approach>0
+s=17 Kp=0.35 Ki=0.01 Kd=4 t=4 m=1000 g=0.001 p=0 goto1+:Approach>0
 r=:RFD e=r-s d=e-p i+=e/(d-g) i/=2 o=Kp*e+Ki*i+Kd*d p=e a=:Approach
 z/=a*r*(r<m)*(d*d>g+e*e>1) :FcuForward=o/t :FcuBackward=-o*t goto2
 :Approach=0 :FcuForward=0 :FcuBackward=0 goto1
