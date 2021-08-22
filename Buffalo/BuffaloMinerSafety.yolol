@@ -1,8 +1,12 @@
 PPchk=(:BTCP>=-17)*(:BTCP<=3)*(:LTCP>=-15)*(:RTCP>=-15)
 Rchk=(:LTCR<=40)*(:LTCR>=0)*(:RTCR<=0)*(:RTCR>=-40)
-:Pchk=(PPchk*Rchk) b="\n" Ang=b+"B:"+:BTCR+" "+:BTCP+b
-:Ang=Ang+"L:"+:LTCR+" "+:LTCP+b+"R:"+:RTCR+" "+:RTCP+b+"Pchk:"+:Pchk
+:Pchk=(PPchk*Rchk) b="\n" 
 if:Mine then:turtle=10end goto1
+//Ang=b+"B:"+:BTCR+" "+:BTCP+b
+//:Ang=Ang+"L:"+:LTCR+" "+:LTCP+b+"R:"+:RTCR+" "+:RTCP+b+"Pchk:"+:Pchk
+
+// Uncomment the two lines above if you want to see angles on your
+// turrets on a screen named :Ang.  Movce the line 4 below them.
 // :BTCP is bottom turret current pitch, :LTCP and :RTCP are for 
 // top turrets.  :Mine is mine button, :turtle is turtle button
 // :PChk is store on memory chip (or other device)
