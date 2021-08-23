@@ -1,7 +1,7 @@
-#NumberPad
-![NumPad](images/ExampleNumPad.jpg)
-This is the script for a numberpad that allows input of number for use in other systems.
+# NumberPad
 
+This is the script for a numberpad that allows input of number for use in other systems.
+![NumPad](images/ExampleNumPad.jpg)
 NOTE: This is a generic example that supports assigning entered number to a user defined variable.
 
 The comments in the code can be left out of course, but here they are for how to use the system.
