@@ -1,4 +1,4 @@
-if:Mine*:PChk then:MLT=1-:MLT :CL=1-:CL goto1else:MLT=0 :CL=:COLL end
+if:Mine*:PChk then:MLT=1-:MLT :CL=1-:CL goto1else:MLT=0 :CL=0 end
 if:PChk==0then:LTP=-7 :RTP=-7 :LTR=18.75 :RTR=-18.75 :BTP=-7end goto1
 
 // :Mine is mining button, :Pchk is on a memory chip or other device
