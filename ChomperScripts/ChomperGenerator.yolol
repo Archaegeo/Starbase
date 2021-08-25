@@ -1,0 +1,3 @@
+cf=1-:CargoFrame G=65-40*(:Eco*cf)
+G-=:BatteryLevel/400*cf*(:FCUForward==0)*(:FCUBackward==0)
+:GeneratorUnitRateLimit=G goto1

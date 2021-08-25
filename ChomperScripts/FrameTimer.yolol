@@ -1,0 +1,5 @@
+:CargoFrame=0 :CLF=0 :Delay=25 goto2-:Frame 
+:CargoFrame=1 :CLF=1 :OpenTimer=0 goto2+:Frame
+:OpenTimer++ goto 2-2*(:OpenTimer>:Delay)+:Frame
+
+// :Delay/5 = # of second delay.
