@@ -1,0 +1,26 @@
+b="\n" o=" Ore" c=" Crystal" k=100 s=" Stacks" :reset=1 mt=0 t=0
+if:Scanner then:Scn=b+"Scanning..." :Scan=1 goto3end goto1
+if:Scanner thenif:Scan thengoto3endelse:Scn="Aborted" goto1end
+:i=0 if:V==0then:Scn=b+"No Contact" goto2end
+M=:M-o-c V1=:V/1728 V=(V1+0.05)/k*k L1=M+b+V+s goto9
+:i=1 M=:M-o-c V2=:V/1728 V=(V2+0.05)/k*k L2=b+M+b+V+s goto9
+P=V2/V1*100 :Scn="Result"+b+L1+L2+b+P+"%"+o+b+(mt/1000)/k*k+" tn"
+:Scanner=0 goto1
+ifM=="Valkite" or M=="Bastium"thenmt+=8.08*:V goto6+:i end
+ifM=="Ajatite"thenmt+=6.31*:V goto6+:i end
+ifM=="Ice" or M=="Vokarium"thenmt+=6.78*:V goto6+:i end
+ifM=="Nhurgite" or M=="Surtrite"thenmt+=6.31*:V goto6+:i end
+ifM=="Charodium"thenmt+=11.25*:V goto6+:i end
+ifM=="Exorium"thenmt+=14.25*:V goto6+:i end
+ifM=="Aegisium"thenmt+=7.67*:V goto6+:i end
+ifM=="Arkanium"thenmt+=4.31*:V goto6+:i end
+ifM=="Karnite"thenmt+=8.08*:V goto6+:i end
+ifM=="Kutonium"thenmt+=7.36*:V goto6+:i end
+ifM=="Lukium"thenmt+=15.25*:V goto6+:i end
+ifM=="Corazium"thenmt+=9.95*:V end mt="Unkn" goto6+:i
+
+// These remarks not needed in code of course.
+// Scanner is first field name on Button and :Scanner
+// Scn is first field name of Text Display
+// On Scanner, rename Volume field to V, Material field to M, and
+// Index field to i 
