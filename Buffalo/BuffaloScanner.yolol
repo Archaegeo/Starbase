@@ -1,11 +1,11 @@
-b="\n" o=" Ore" c=" Crystal" k=100 s=" Stacks" :reset=1
+b="\n" o=" Ore" c=" Crystal" k=100 s=" Stks" :reset=1
 if:Scanner then:Scn=b+"Scanning..." :Scan=1 goto3end goto1
-if:Scanner thenif:Scan thengoto3endelse:Scn="Offline" goto1end
-:i=0 if:V==0then:Scn=b+"No Contact" goto2end
+if:Scanner thenif:Scan thengoto4endelse:Scn="Offline" goto1end
+:i=0 if:V==0then:Scn=b+"Scanning.." goto2end :Scn="Analyzing"
 V1=:V/1728 V=(V1+0.05)/k*k L1=:M-o-c+b+V+s
 :i=1 V2=:V/1728 V=(V2+0.05)/k*k L2=b+:M-o-c+b+V+s
-P=V2/V1*100 :Scn="Result"+b+L1+L2+b+b+P+"%"+o t=0
-if:Scanner thenift<20thent++ goto8endelse:Scn="Offline" goto1end
+P=V2/V1*100 :Scn="Result"+b+L1+L2+b+b+P+"%"+o 
+:Scanner=0 goto1
 
 // Scanner is first field name on Button and :Scanner
 // Scn is first field name of Text Display

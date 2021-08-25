@@ -1,10 +1,10 @@
 b="\n" o=" Ore" c=" Crystal" k=100 s=" Stacks" :reset=1 mt=0 t=0
 if:Scanner then:Scn=b+"Scanning..." :Scan=1 goto3end goto1
-if:Scanner thenif:Scan thengoto3endelse:Scn="Aborted" goto1end
-:i=0 if:V==0then:Scn=b+"No Contact" goto2end
+if:Scanner thenif:Scan thengoto4endelse:Scn="Aborted" goto1end
+:i=0 if:V==0then:Scn=b+"Scanning.." goto2end :Scn="Analyzing"
 M=:M-o-c V1=:V/1728 V=(V1+0.05)/k*k L1=M+b+V+s goto9
 :i=1 M=:M-o-c V2=:V/1728 V=(V2+0.05)/k*k L2=b+M+b+V+s goto9
-P=V2/V1*100 :Scn="Result"+b+L1+L2+b+P+"%"+o+b+(mt/1000)/k*k+" tn"
+P=V2/V1*100 :Scn="Result"+b+L1+L2+b+P+"%"+o+b+mt/1000/k*k+" mt"
 :Scanner=0 goto1
 ifM=="Valkite" or M=="Bastium"thenmt+=8.08*:V goto6+:i end
 ifM=="Ajatite"thenmt+=6.31*:V goto6+:i end
