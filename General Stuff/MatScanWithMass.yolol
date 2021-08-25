@@ -1,4 +1,4 @@
-b="\n" o=" Ore" c=" Crystal" k=100 s=" Stacks" :reset=1 mt=0 t=0
+b="\n" o=" Ore" c=" Crystal" k=100 s=" Stks" :reset=1 mt=0
 if:Scanner then:Scn=b+"Scanning..." :Scan=1 goto3end goto1
 if:Scanner thenif:Scan thengoto4endelse:Scn="Aborted" goto1end
 :i=0 if:V==0then:Scn=b+"Scanning.." goto2end :Scn="Analyzing"
