@@ -1,20 +1,20 @@
-i=:wpi d=:wpd s=:wps h=:wph n=:wpnum+3 goto1+(i+d+s+h)>0
-a=16 n+=(4-n)*h+i-d n+=a*(n<4)-a*(n>(a+3)) ifs==0thengoton end
-k=1000 wps=:x/k*k+" "+:y/k*k+" "+:z/k*k goton
-ifs then:wp1=wps end :wpc=:wp1 :wpb=1 :wpnum=n-3 goto20
-ifs then:wp2=wps end :wpc=:wp2 :wpb=1 :wpnum=n-3 goto20
-ifs then:wp3=wps end :wpc=:wp3 :wpb=1 :wpnum=n-3 goto20
-ifs then:wp4=wps end :wpc=:wp4 :wpb=1 :wpnum=n-3 goto20
-ifs then:wp5=wps end :wpc=:wp5 :wpb=1 :wpnum=n-3 goto20
-ifs then:wp6=wps end :wpc=:wp6 :wpb=1 :wpnum=n-3 goto20
-ifs then:wp7=wps end :wpc=:wp7 :wpb=1 :wpnum=n-3 goto20
-ifs then:wp8=wps end :wpc=:wp8 :wpb=1 :wpnum=n-3 goto20
-ifs then:wp9=wps end :wpc=:wp9 :wpb=1 :wpnum=n-3 goto20
-ifs then:wp10=wps end :wpc=:wp10 :wpb=1 :wpnum=n-3 goto20
-ifs then:wp11=wps end :wpc=:wp11 :wpb=1 :wpnum=n-3 goto20
-ifs then:wp12=wps end :wpc=:wp12 :wpb=1 :wpnum=n-3 goto20
-ifs then:wp13=wps end :wpc=:wp13 :wpb=1 :wpnum=n-3 goto20
-ifs then:wp14=wps end :wpc=:wp14 :wpb=1 :wpnum=n-3 goto20
-ifs then:wp15=wps end :wpc=:wp15 :wpb=1 :wpnum=n-3 goto20
-ifs then:wp16=wps end :wpc=:wp16 :wpb=1 :wpnum=n-3 goto20
-if:wpb thengoto20end goto1
+i=:wpi d=:wpd s=:wps h=:wph n=:wpnum a=16 goto1+(i+d+s+h)>0
+n=h+(1-h)*(n+i-d) n+=a*(n<1)-a*(n>a) :wpnum=n :wpb=1 goto(n+3)/(s==0)
+k=1000 ws=:x/k*k+" "+:y/k*k+" "+:z/k*k goton+3
+ifs then:wp1=ws end w=:wp1 goto20
+ifs then:wp2=ws end w=:wp2 goto20
+ifs then:wp3=ws end w=:wp3 goto20
+ifs then:wp4=ws end w=:wp4 goto20
+ifs then:wp5=ws end w=:wp5 goto20
+ifs then:wp6=ws end w=:wp6 goto20
+ifs then:wp7=ws end w=:wp7 goto20
+ifs then:wp8=ws end w=:wp8 goto20
+ifs then:wp9=ws end w=:wp9 goto20
+ifs then:wp10=ws end w=:wp10 goto20
+ifs then:wp11=ws end w=:wp11 goto20
+ifs then:wp12=ws end w=:wp12 goto20
+ifs then:wp13=ws end w=:wp13 goto20
+ifs then:wp14=ws end w=:wp14 goto20
+ifs then:wp15=ws end w=:wp15 goto20
+ifs then:wp16=ws end w=:wp16 goto20
+:wpc=w goto20*:wpb
