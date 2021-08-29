@@ -1,22 +1,22 @@
 a="Valkite" wa=8.08 b="Bastium" wb=wa c="Ajatite" wc=6.31 d="Ice"
 wd=6.78 e="Vokarium" we=wd f="Nhurgite" wf=wc g="Surtrite" wg=wf
-h="Charodium" wh=11.25 i="Exorium" wi=14.25 j="Aegisium" wj=7.67 
+h="Charodium" wh=11.25 i="Exorium" wi=14.25 j="Aegisium" wj=7.67
 k="Arkanium" wk=4.31 l="Karnite" wl=8.08 m="Kutonium" wm=7.36
 n="Lukium" wn=15.25 o="Corazium" wo=9.95 p="Ymrium" wp=8.78
-q="Xhalium" wq=wc
-r="\n" s=" Ore" t=" Crystal" u=100 v=" Stks" :reset=1 mt=0
-if:Scanner then:Scn=r+"Scanning..." :Scan=1 goto9end goto7
-if:Scanner thenif:Scan thengoto10endelse:Scn="Aborted" goto7end
-:i=0 if:V==0then:Scn=r+"Scanning.." goto8end :Scn="Analyzing"
-z=:M-s-t V1=:V/1728 V1=(V1+0.05)/u*u L1=z+r+V1+v goto15
-:i=1 z=:M-s-t V2=:V/1728 V2=(V2+0.05)/u*u L2=r+z+r+V2+v goto15
-P=V2/V1*100 :Scn="Result"+r+L1+L2+r+P+"%"+s+r+mt/1000/u*u+" mt"
-:Scanner=0 goto7
+q="Xhalium" wq=wc scn=""
+r="\n" s=" Ore" t=" Crystal" u=100 v=" Stks" scn=""
+if:Scanner==0then:Scn="Off"+r+scn goto8end :Scan=1 :Scn="Scan.."+r+scn
+:ind=0 if:V==0then:Scn="Scan."+r+scn goto8end
+z=:M-s-t V1=:V/1728 V1=(V1+0.05)/u*u L1=z+r+V1+v goto14
+:ind=1 z=:M-s-t V2=:V/1728 V2=(V2+0.05)/u*u L2=r+z+r+V2+v goto14
+P=V2/V1*100 Scn=L1+L2+r+P+"%"+s+r+mt/1000/u*u+" mt" :Scn="Final"+r+scn
+mt=0 :ind=0 :V=0 goto8
+:Scn="Calc"+r+scn
 wt=(z==a)*wa+(z==b)*wb+(z==c)*wc+(z==d)*wd+(z==e)*we+(z==f)*wf
 wt+=(z==g)*wg+(z==h)*wh+(z==i)*wi+(z==j)*wj+(z==k)*wk+(z==l)*wl
-wt+=(z==m)*wm+(z==n)*wn+(z==o)*wo+(z==p)*wp+(z==q)*wq 
-mt+=wt*:V goto12+:i
+wt+=(z==m)*wm+(z==n)*wn+(z==o)*wo+(z==p)*wp+(z==q)*wq
+mt+=wt*:V goto11+:ind
 // Scanner is first field name on Button and :Scanner
 // Scn is first field name of Text Display
 // On Scanner, rename Volume field to V, Material field to M, and
-// Index field to i 
+// Index field to ind 
