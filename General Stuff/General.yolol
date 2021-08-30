@@ -9,3 +9,4 @@ i=:TSZ
 ifi then:TBC=2 a=0else:TBC=0 a=1end
 if(not b)*a then:Beacon=0 b=1end
 if(not a)*b thena=0end goto2
+//generic chip i sometimes use to control various things, ignore.

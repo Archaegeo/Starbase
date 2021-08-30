@@ -1,0 +1,11 @@
+i=:insideSafeZone x=25 :BeaconWarn=:Beacon*(not i) :TBC=2*i a=1-i
+if(not b)*a then:Beacon=0 b=1end goto:Beacon*a*b*3
+x-- if x>0 then goto3 end b=0 goto1 
+// BeaconWarn, warning button button enable blink field name 
+// TBC: warning button Button Color field name
+// Beacon: warning button and transponder first field names
+// x: time transponder stays on in unsafe
+// This code turns off transponder if you cross into unsafe. 
+// If you turn it back on, it stays on for x/5 seconds then turns off.
+// It also changes the color of the warning button to red if unsafe.
+// and makes it blink if unsafe and on.

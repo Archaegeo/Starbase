@@ -1,3 +1,4 @@
 :FcuBackward = -:FcuForward goto1
 
-
+// Used to control forward and backward on one centering lever
+// Leaver should be FCUForward with min -100 max 100

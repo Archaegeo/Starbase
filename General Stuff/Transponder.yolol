@@ -7,3 +7,5 @@ if(not a)*b thena=0end goto1
 // BeaconWarn, warning button first field name
 // TBC, warning button, Button Color field name
 // Beacon, transponder button and transponder first field name
+// Turns transponder off when crossing zoneline unless you turn it
+// back on intentionally.

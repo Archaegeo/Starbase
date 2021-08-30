@@ -5,3 +5,5 @@ if:B<10000then:GLM=100-:B/100else:GLM=0end goto1
 fr=2*(100-:Battery/100)+50*:Collect :FR1=fr*1.5 :FR2=fr :FR3=fr*0.5
 f=0 if:F1<:F2 thenif:F1<:F3 thenf=:F1 elsef=:F3 endelsef=:F2 end
 iff>:F3 thenf=:F3 end :FuelRod=f
+
+// Different generator scrip control examples, use one, not all.

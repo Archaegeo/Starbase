@@ -1,8 +1,0 @@
-d=2.16 o=-1.6 p=3.141 x=360/(2*p)
-l=:d+o c=d/l :MinerPitch=((p/2)-(c+(c^3)/6+(c^5)/40))*x goto1
-
-// Laser divergence
-// d=distance laser off axis
-// o=forward offset of rangefinder
-//lasers resting point at 0deg face each other directly 
-//and pointing straight forward is 90 deg

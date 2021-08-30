@@ -1,0 +1,4 @@
+:ML=22*:Mine-:R :RT=90/:R :LT=-:RT goto1
+// See https://www.youtube.com/watch?v=6hsRsziy02I for full instr.
+// Credit to Ravaen
+// Alignes 2 lasers to the contact point of the rangefinder
