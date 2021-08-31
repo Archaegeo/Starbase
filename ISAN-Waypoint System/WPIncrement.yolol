@@ -1,6 +1,7 @@
-i=:wpi d=:wpd s=:wps h=:wph n=:wpnum a=16 goto1+(i+d+s+h)>0
-n=h+(1-h)*(n+i-d) n+=a*(n<1)-a*(n>a) :wpnum=n :wpb=1 goto(n+3)/(s==0)
-k=1000 ws=:x/k*k+" "+:y/k*k+" "+:z/k*k goton+3
+i=:wpi d=:wpd s=:wps h=:wph n=:wpnum a=15 goto1+(i+d+s+h)>0
+n+=i-d i=:wpi d=:wpd n=h+(1-h)*n :wpnum=n goto3-(i+d)>0
+ifn>a+n<1thenn=a*(n<1)+1*(n>a) :wpnum=n end :wpd=1 :wpb=1
+k=1000 ws=:x/k*k+" "+:y/k*k+" "+:z/k*k goton+4
 ifs then:wp1=ws end w=:wp1 goto20
 ifs then:wp2=ws end w=:wp2 goto20
 ifs then:wp3=ws end w=:wp3 goto20
@@ -16,5 +17,4 @@ ifs then:wp12=ws end w=:wp12 goto20
 ifs then:wp13=ws end w=:wp13 goto20
 ifs then:wp14=ws end w=:wp14 goto20
 ifs then:wp15=ws end w=:wp15 goto20
-ifs then:wp16=ws end w=:wp16 goto20
 :wpc=w goto20*:wpb
