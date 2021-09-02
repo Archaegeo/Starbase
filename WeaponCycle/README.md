@@ -32,7 +32,7 @@ Variable | Device | Field # | Original Field Name
 | --- | --- | --- | --- |
 :IsLOn | Laser Cannon Barrel | 1 | MountedWeaponFire
 :IsCOn | Autocannon Barrel | 1 | MountedWeaponFire
-:CLR | Simple Button 12x12 cm | 1 | ButtonState
+:CLF | Simple Button 12x12 cm | 1 | ButtonState
 :CCF | Simple Button 12x12 cm | 1 | ButtonState
 :WepSt | Warning Light Button 12x12 cm | 1 | ButtonState
 :WepDisp | Text Panel 24x24 cm | 1 | PanelValue
