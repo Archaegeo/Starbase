@@ -1,3 +1,4 @@
-cf=1-:CargoFrame G=95-55*(:Eco*cf)
-G-=:BatteryLevel/290*cf*(:FCUForward==0)*(:FCUBackward==0)
-:GeneratorUnitRateLimit=G goto1
+b=:BatteryLevel==10000 G=:Generator gr=:GenRate G+=:CBOS*101*(G<101)
+G+=(51-G)*(1-:ECO)*(G<51) G+=(32-G)*(:FCUForward>0)*(G<32) 
+G+=1*(b!=1)*(G<=gr)*(gr<100) G-=1*b*(G>=gr)*(gr>0) G*=:Shutdown
+:Generator=G :GenRate=:GeneratorUnitRate goto1

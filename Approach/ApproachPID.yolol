@@ -1,6 +1,14 @@
-s=17 Kp=0.35 Ki=0.01 Kd=4 t=4 m=1000 g=0.001 p=0 goto1+:Approach>0
-r=:RFD e=r-s d=e-p i+=e/(d-g) i/=2 o=Kp*e+Ki*i+Kd*d p=e a=:Approach
-z/=a*r*(r<m)*(d*d>g+e*e>1) :FcuForward=o/t :FcuBackward=-o*t goto2
+s=10 Kp=0.3 Ki=0.01 Kd=4 t=3 m=1000 g=1/m p=0 goto1+:Approach>0
+r=:RFD e=r-s d=e-p i+=e/(d-g) i/=2 o=Kp*e+Ki*i+Kd*d p=e r*=r<m
+z/=:Approach*r*(d*d>g+e*e>1) :FcuForward=o/t :FcuBackward=-o*t goto2
 :Approach=0 :FcuForward=0 :FcuBackward=0 goto1
-//Credit to the PID folks and Whitestrake
-//The default kp, kd, and t should be safe for most ships.
+
+// PID approach uses a proportional-integal-derivative controller to
+// output FCU values appropriate to the distance and current speed.
+// It has several tunables:
+// s (setpoint)      the distance we want to get to
+// Kp (proportional) how much we factor in our current distance
+// Ki (integral)     factor of how long we've been at our distance
+// Kd (derivative)   factor of prediction of where we'll be in future
+// t (thrust diff)   account for disparity in forward/rev thrust power
+// CREDIT TO WHITESTRAKE

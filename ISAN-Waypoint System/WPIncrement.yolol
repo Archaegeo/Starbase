@@ -1,7 +1,7 @@
 i=:wpi d=:wpd s=:wps h=:wph n=:wpnum a=15 goto1+(i+d+s+h)>0
 n+=i-d i=:wpi d=:wpd n=h+(1-h)*n :wpnum=n goto3-(i+d)>0
 ifn>a+n<1thenn=a*(n<1)+1*(n>a) :wpnum=n end :wpd=1 :wpb=1
-k=1000 ws=:x/k*k+" "+:y/k*k+" "+:z/k*k goton+4
+k=1000 ws="WP"+n+" "+:x/k*k+" "+:y/k*k+" "+:z/k*k goton+4
 ifs then:wp1=ws end w=:wp1 goto20
 ifs then:wp2=ws end w=:wp2 goto20
 ifs then:wp3=ws end w=:wp3 goto20
