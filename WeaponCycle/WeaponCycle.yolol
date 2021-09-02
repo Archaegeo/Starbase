@@ -1,0 +1,20 @@
+a="ON" b="OFF" :IsLOn=:Fire*:clf :IsCOn=:Fire*:ccf
+if :WepSt<1 then goto1 end :WepSt=0 x=s++ s=(x<3)*x
+l=b c=b :clf=s<2 :ccf=s>0 if :clf then l=a end if :ccf then c=a end
+:WepDisp="\nLaser:  "+l+"\nCannon: "+c goto1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// states: 0=lasers only; 1=both; 2=cannon only; 0=>1=>2=>0
