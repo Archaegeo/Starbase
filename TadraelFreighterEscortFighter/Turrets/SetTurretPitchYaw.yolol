@@ -1,0 +1,2 @@
+// Set y and x for rot pitch and rot yaw
+:y=:FCURotationalPitch :x=:FCURotationalYaw goto1

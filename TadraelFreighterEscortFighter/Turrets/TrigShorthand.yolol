@@ -1,0 +1,1 @@
+:c=:a*:x :d=:a*:y :e=-:a*:x :f=-:a*:y :g=-:c :z=-:x :w=-:y goto1

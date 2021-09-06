@@ -1,0 +1,4 @@
+a=0.707 b=-0.707
+y=:FCURotationalPitch x=:FCURotationalYaw c=a*x d=a*y e=b*x f=b*y g=-c
+:BTP=-y :BTY=-x :BLTY=-c+d :BLTP=-c-d :BRTY=-c+f :BRTP=-e-d
+:TTP=y :TTY=x :TRTY=c-d :TRTP=c+d :TLTY=c-f :TLTP=e+d goto2

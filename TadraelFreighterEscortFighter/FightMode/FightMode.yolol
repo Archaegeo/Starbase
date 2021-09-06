@@ -1,0 +1,19 @@
+if :FightMode!=1 then goto1 end :GPitUp=1
+if :GPitUpState<1 then goto2 end :GPitOver=1
+if :GPitOverState<1 then goto3 end
+if :FightMode!=0 then goto4 end :GPitOver=0
+if :GPitOverState>0 then goto5 end :GPitUp=0 goto1
+
+
+
+
+
+
+
+
+// vestigial, but possibly useful code. Only use above
+s-=--s if s=="u" then :GPitUp=f end if s=="o" then :GPitOver=f end
+if s=="o" and :GPitOverState!=f then goto3 end
+if s=="u" and :GPitUpState!=f then goto4 end gotof*6+1
+if :FightMode!=0 then goto5 end s="uo" f=0 goto2
+
