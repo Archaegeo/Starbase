@@ -2,8 +2,6 @@
 
 ## Usage
 
-*Caution: May no longer be of use*
-
 Cycle through multiple states of your ship weapons with ease. The code assumes you're using at least 2 different weapons that you would like to cycle.
 
 When you press the `:WepSt` simple button, the ship will cycle through the following weapon states:
