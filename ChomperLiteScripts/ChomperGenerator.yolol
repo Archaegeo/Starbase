@@ -1,4 +1,11 @@
-b=:BatteryLevel==10000 G=:Generator gr=:GenRate G+=:CBOS*101*(G<101)
-G+=(51-G)*(1-:ECO)*(G<51) G+=(32-G)*(:FCUForward>0)*(G<32) 
+b=:BatteryLevel>=9995 G=:Generator gr=:GenRate m=51*(1-:ECO)+101*:CBOS
+m+=33*(:FCUForward>0)*(m==0) ifG<m+b*(m==0+G>m)thenG=m end 
 G+=1*(b!=1)*(G<=gr)*(gr<100) G-=1*b*(G>=gr)*(gr>0) G*=:Shutdown
-:Generator=G :GenRate=:GeneratorUnitRate goto1
+:Generator=G :GenRate=:GeneratorUnitRate m=0 goto1
+// b = current battery level
+// G = current generator setting
+// gr = current generator rate (how close to setting)
+// m = minimum battery level, 0 base, 33 if forward engines on,
+//     51 if Eco button off, 101 if Cargo Beams are on
+// G is raised by 1 or lowered by 1 to keep battery charged so long
+// as G is at least minimum.

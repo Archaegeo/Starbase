@@ -1,0 +1,2 @@
+if:Eco*(:FCUForward>60)then:FCUForward=60end
+if(:BatteryLevel<1500)then:FCUForward=0end goto1
