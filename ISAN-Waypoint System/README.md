@@ -40,22 +40,32 @@ You can install all or part of this system. These instructions assume you are in
 
 1. Install all components and chips for desired level of system.  Be sure to bolt them in where appropriate.  Remember Memory chips only go in one way and can vanish if not inserted properly.  Recommend inserting memory chip, then yaw slightly on ship, see if its still in place.
 `Note: All pictures below are from a "live" system.  Use the values shown in the Readme instead of the pitcutes.`
-1. Install Memory Chip 1.  On the chip, set the following fields: `X`, `Y`, `Z` to 0, `wx`, `wy`, `wz` to 0, `i`, `j`, `k` to 0, and `spd` to 0 ![MEMORY-CHIP1](images/MemChip1.jpg)
-1. Install Memory Chip 2.  On it set fields `wpu`, `wpcn` to 1, and set `wpc` to `"[Unnamed] \nX:0 \nY:0 \nZ:0"` (quotes included). ![MEMORY-CHIP2](images/MemChip2.jpg)
-1. Install Memory Chip 3.  On the chip, set the fields to: `w1` to `w10`.  Set the values to `"[Unnamed] \nX:0 \nY:0 \nZ:0"` (quotes included) unless you have specific waypoints you want to put in. ![MEMORY-CHIP3](images/MemChip3.jpg)
+1. Install Memory Chip 1.  On the chip, set the following fields: `X`, `Y`, `Z` to 0, `wx`, `wy`, `wz` to 0, `i`, `j`, `k` to 0, and `spd` to 0 
+![MEMORY-CHIP1](images/MemChip1.jpg)
+1. Install Memory Chip 2.  On it set fields `wpu`, `wpcn` to 1, and set `wpc` to `"[Unnamed] \nX:0 \nY:0 \nZ:0"` (quotes included). 
+![MEMORY-CHIP2](images/MemChip2.jpg)
+1. Install Memory Chip 3.  On the chip, set the fields to: `w1` to `w10`.  Set the values to `"[Unnamed] \nX:0 \nY:0 \nZ:0"` (quotes included) unless you have specific waypoints you want to put in. 
+![MEMORY-CHIP3](images/MemChip3.jpg)
 1. (OPTIONAL) Repeat with Memory Chips 4 and 5 if using 20 or 30 waypoints. `w11` to `w20` and `w21` to `w30`
 1. Install the modified ISAN.yolol from here on an Advanced Chip.  Set up the receivers fields and ISAN text screen name (`_`) per https://isan.to/isan.pdf. The Waypoint system doesnt care if you are mono or quad mode.  If quad mode, set pr=0 on line 1 to turn off precision.  
-`NOTE: The isan.yolol in this folder is modified, do not use the vanilla ISAN. (Display and Reciever fields should be updated as shown in the PDF)` ![ISAN-SCREEN](images/ISANScreen.jpg)
+`NOTE: The isan.yolol in this folder is modified, do not use the vanilla ISAN. (Display and Reciever fields should be updated as shown in the PDF)` 
+![ISAN-SCREEN](images/ISANScreen.jpg)
 1. Install ShipHeading.yolol on an advanced chip.  
-    1. On a text screen, rename PanelValue field to `Heading`  ![HEADING](images/Heading.jpg)  This will show current live heading after its established.
+    1. On a text screen, rename PanelValue field to `Heading`  
+    ![HEADING](images/Heading.jpg)  This will show current live heading after its established.
 1. Install 30WPDTW.yolol on an advanced chip.  
-    1. On a text screen, rename PanelValue field name to `DTW`.  This will display Waypoint Number, WP Heading and WP Pitch, and delta X, Y, Z and distance to it. ![DTW-SCREEN](images/DTWScreen.jpg)  
+    1. On a text screen, rename PanelValue field name to `DTW`.  This will display Waypoint Number, WP Heading and WP Pitch, and delta X, Y, Z and distance to it. 
+    ![DTW-SCREEN](images/DTWScreen.jpg)  
 1. Install 30WPIncrement.yolol on an basic chip. Set the value of `a` on line 1 to your total maximum number of waypoints.
-    1. On a text screen, rename PanelValue field to `wp`.  ![WP-SCREEN](images/WPScreen.jpg)  
-    1. On a second text screen, rename PanelValue field to `dest` ![Dest-SCREEN](images/DestScreen.jpg)  
+    1. On a text screen, rename PanelValue field to `wp`.  
+    ![WP-SCREEN](images/WPScreen.jpg)  
+    1. On a second text screen, rename PanelValue field to `dest` 
+    ![Dest-SCREEN](images/DestScreen.jpg)  
 1. (OPTIONAL) Install Deltas.yolol on basic chip.  
-    1. (If deltas.yolol installed) On a Text Screen, rename PanelValue field name to `Deltas`.  When moving, this will show your current delta X, Y and Z along with OPENING or CLOSING in reference to X, Y and Z to selected Waypoint.![DELTAS-SCREEN](images/DeltasScreen.jpg)
-1. Install 4 buttons. Rename ButtonState field names to `wpi`, `wpd`, `wps`, `wph`.  (Increment, Decrement, Save, Home). ButtonStyle should be 0.  ButtonColor is user preference Home. ![WP-Buttons](images/WPInc-DecButtons.jpg)  
+    1. (If deltas.yolol installed) On a Text Screen, rename PanelValue field name to `Deltas`.  When moving, this will show your current delta X, Y and Z along with OPENING or CLOSING in reference to X, Y and Z to selected Waypoint.
+    ![DELTAS-SCREEN](images/DeltasScreen.jpg)
+1. Install 4 buttons. Rename ButtonState field names to `wpi`, `wpd`, `wps`, `wph`.  (Increment, Decrement, Save, Home). ButtonStyle should be 0.  ButtonColor is user preference. 
+![WP-Buttons](images/WPInc-DecButtons.jpg)  
 1. Install 1 button.  Rename ButtonState field name to `wpl`.  ButtonStyle should be 1 for this button.   This is the button you press after you find desired waypoint to send it to system for use.
 1. Install progress bar near buttons if needed to show currently selected waypoint. Name PanelValue to `wpn`.  Minvalue 0, maxvalue 30 (or your total number of waypoints).
 1. (OPTIONAL) You can put SPD on any extra display you want to display just speed.  Currently displayed on ISAN panel and on Ships Heading panel.
