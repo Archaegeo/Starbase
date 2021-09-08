@@ -1,0 +1,20 @@
+i=:wpi d=:wpd s=:wps h=:wph l=:wpl a=10 n=:wpn goto1+(i+d+s+h+l)>0
+n+=i-d n=n*(n>0andn<=a)+a*(n<1)+1*(n>a) n=h+(1-h)*n :wpn=n k=1000 e=20
+i=:wpi d=:wpd o=n/2-(n/2000*k) j="WP"+n+" [Loading]" goto4-2*((i+d)>0)
+t="[Unnamed] \nX:"+:x/k*k+" \nY:"+:y/k*k+" \nZ:"+:z/k*k goto 4.5+n/2
+ifo thenw=:w1 ifs then:w1=t endelsew=:w2 ifs then:w2=t endendgotoe
+ifo thenw=:w3 ifs then:w3=t endelsew=:w4 ifs then:w4=t endendgotoe
+ifo thenw=:w5 ifs then:w5=t endelsew=:w6 ifs then:w6=t endendgotoe
+ifo thenw=:w7 ifs then:w7=t endelsew=:w8 ifs then:w8=t endendgotoe
+ifo thenw=:w9 ifs then:w9=t endelsew=:w10 ifs then:w10=t endendgotoe
+ifo thenw=:w11 ifs then:w11=t endelsew=:w12 ifs then:w12=t endendgotoe
+ifo thenw=:w13 ifs then:w13=t endelsew=:w14 ifs then:w14=t endendgotoe
+ifo thenw=:w15 ifs then:w15=t endelsew=:w16 ifs then:w16=t endendgotoe
+ifo thenw=:w17 ifs then:w17=t endelsew=:w18 ifs then:w18=t endendgotoe
+ifo thenw=:w19 ifs then:w19=t endelsew=:w20 ifs then:w20=t endendgotoe
+ifo thenw=:w21 ifs then:w21=t endelsew=:w22 ifs then:w22=t endendgotoe
+ifo thenw=:w23 ifs then:w23=t endelsew=:w24 ifs then:w24=t endendgotoe
+ifo thenw=:w25 ifs then:w25=t endelsew=:w26 ifs then:w26=t endendgotoe
+ifo thenw=:w27 ifs then:w27=t endelsew=:w28 ifs then:w28=t endendgotoe
+ifo thenw=:w29 ifs then:w29=t endelsew=:w30 ifs then:w30=t endendgotoe
+ifl then :wpcn=n :wpc=w :wpu=1 :dest=j :dtw=j end :wp=n+"\n"+w goto1
