@@ -5,14 +5,14 @@ v=1 ifc=="-"thenv=-1 ifa!=""thena--endend i++ :dest+="." j=1
 :wZ=:wY :wY=:wX :wX=o*v o=0 n=""+a goto3+3*(i>2)
 ifn==""thenn="[Unnamed]"end nm="WP"+:wpn fnm=nm+"\n"+n+"\n" ds="? km"
 :dest=fnm+"X:"+:wx+"\nY:"+:wy+"\nZ:"+:wz+"\nD:"+ds
-dx=:X-:wX dy=:Y-:wY dz=:Z-:wZ :wpu=0 ul="WP"+:wpn+ld goto9+10*:wpu
+dx=:X-:wX dy=:Y-:wY dz=:Z-:wZ :wpu=0 goto9+10*:wpu
 dx-=dx%1 dy-=dy%1 dz-=dz%1 x=dx^2 y=dy^2 z=dz^2 d=sqrt(x+y+z) ds=d
 ifds>k/10thends/=k ds*=100 ds+=" km"elseds-=ds%1 ds+=" m"end
 xz=sqrt(dx^2+dz^2) q=abs(dx/xz) r=xz/d // written by LizardFish
 b1=-dy/d s1=-dz/xz p=(b1<s2)*(b1>-s2)*d1*(b1+b1^3/6)
 p+=(r<s2)*((dy<=0)*(90-d1*(r+r^3/6))+(dy>0)*(d1*(r+r^3/6)-90))
 h=(q<=s2)*((dz<=0)*(d1*(q+q^3/6))+(dz>0)*(180-d1*(q+q^3/6)))
-h+=(s1<s2)*(s1>-s2)*(90-d1*(s1+s1^3/6)) ul="WP"+:wpn+ld goto16+3*:wpu
+h+=(s1<s2)*(s1>-s2)*(90-d1*(s1+s1^3/6)) goto16+3*:wpu
 ifdx>0thenh=360-h end h-=h%1 p-=p%1 goto17+(h!=360)*(p<91)*(p>-91)
 h="ERR" p="ERR"
 dtw=nm+"\ndX:"+dx+"\ndY:"+dy+"\ndZ:"+dz+"\nwH:"+h+dg+"\nwP:"+p+dg
