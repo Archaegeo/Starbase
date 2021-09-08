@@ -1,6 +1,6 @@
 # Version 5.0 - ISAN 2.5.3 + up to 30 Waypoint System + Ship and Waypoint Heading
 (Thanks to Storm_UK for the 30 waypoint refactor.)
-### Changes 9/8/21 version 5.0: Increased to 30 waypoints, increased name length to 10 char, added ability to rapidly preview waypoint before selecting it, removed need for warning buttons.  IMPORTANT: Waypoints field names on mem chips are now w1 to w30 instead of wp1 to wp30.
+### Changes 9/8/21 version 5.0: Increased to 30 waypoints, increased name length to 10 char, added ability to rapidly preview waypoint before selecting it, removed need for warning buttons.  IMPORTANT: Waypoints field names on mem chips are now w1 to w30 instead of wp1 to wp30.  Waypoint format changed to `"Center \nX:0 \nY:0 \nZ:0"` (yes with the `\n`'s)
 
 #### Single Board Install
 ![Full-System Single board](images/FullSystem.jpg)
@@ -44,10 +44,10 @@ You can install all or part of this system. These instructions assume you are in
 1. Install Memory Chip 1.  On the chip, set the following fields: `X`, `Y`, `Z` to 0, `wx`, `wy`, `wz` to 0, `i`, `j`, `k` to 0, and `spd` to 0 
 
 ![MEMORY-CHIP1](images/MemChip1.jpg)
-1. Install Memory Chip 2.  On it set fields `wpu`, `wpcn` to 1, and set `wpc` to `"[Unnamed] \nX:0 \nY:0 \nZ:0"` (quotes included). 
+1. Install Memory Chip 2.  On it set fields `wpu`, `wpcn` to 1, and set `wpc` to `"Center \nX:0 \nY:0 \nZ:0"` (quotes included). 
 
 ![MEMORY-CHIP2](images/MemChip2.jpg)
-1. Install Memory Chip 3.  On the chip, set the fields to: `w1` to `w10`.  Set the values to `"[Unnamed] \nX:0 \nY:0 \nZ:0"` (quotes included) unless you have specific waypoints you want to put in. 
+1. Install Memory Chip 3.  On the chip, set the fields to: `w1` to `w10`.  Set the values to `"Center \nX:0 \nY:0 \nZ:0"` (quotes included) unless you have specific waypoints you want to put in. 
 
 ![MEMORY-CHIP3](images/MemChip3.jpg)
 1. (OPTIONAL) Repeat with Memory Chips 4 and 5 if using 20 or 30 waypoints. `w11` to `w20` and `w21` to `w30`
