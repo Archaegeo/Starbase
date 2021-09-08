@@ -11,6 +11,7 @@
 
 
 This is the ISAN system from the Collective. 
+
 ![Coordinates](images/Coordinates.jpg)
 
 It has been modified to work with my waypoint system and adding in heading and pitch for both ship and to waypoint.  The system will store up to 30 waypoints, cycle up and down (wrapping at the ends) and has an overwrite and home feature (goes to wp1).
@@ -55,9 +56,9 @@ You can install all or part of this system. These instructions assume you are in
 
 ![ISAN-SCREEN](images/ISANScreen.jpg)
 1. Install ShipHeading.yolol on an advanced chip.  
-    1. On a text screen, rename PanelValue field to `Heading`  
-    
-    ![HEADING](images/Heading.jpg)  This will show current live heading after its established.
+    1. On a text screen, rename PanelValue field to `Heading`  This will show current live heading after its established.
+
+    ![HEADING](images/Heading.jpg) 
 1. Install 30WPDTW.yolol on an advanced chip.  
     1. On a text screen, rename PanelValue field name to `DTW`.  This will display Waypoint Number, WP Heading and WP Pitch, and delta X, Y, Z and distance to it. 
     
