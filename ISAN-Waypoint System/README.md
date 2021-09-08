@@ -39,13 +39,13 @@ You can install all or part of this system. These instructions assume you are in
 ###### Note:  If progress bar not used, then `:wpn` must be available somewhere (memory chip)
 
 1. Install all components and chips for desired level of system.  Be sure to bolt them in where appropriate.  Remember Memory chips only go in one way and can vanish if not inserted properly.  Recommend inserting memory chip, then yaw slightly on ship, see if its still in place.
-###### Note: All pictures below are from a "live" system.  Use the values shown in the Readme instead of the pitcutes.
+`Note: All pictures below are from a "live" system.  Use the values shown in the Readme instead of the pitcutes.`
 1. Install Memory Chip 1.  On the chip, set the following fields: `X`, `Y`, `Z` to 0, `wx`, `wy`, `wz` to 0, `i`, `j`, `k` to 0, and `spd` to 0 ![MEMORY-CHIP1](images/MemChip1.jpg)
 1. Install Memory Chip 2.  On it set fields `wpu`, `wpcn` to 1, and set `wpc` to `"[Unnamed] \nX:0 \nY:0 \nZ:0"` (quotes included). ![MEMORY-CHIP2](images/MemChip2.jpg)
 1. Install Memory Chip 3.  On the chip, set the fields to: `w1` to `w10`.  Set the values to `"[Unnamed] \nX:0 \nY:0 \nZ:0"` (quotes included) unless you have specific waypoints you want to put in. ![MEMORY-CHIP3](images/MemChip3.jpg)
 1. (OPTIONAL) Repeat with Memory Chips 4 and 5 if using 20 or 30 waypoints. `w11` to `w20` and `w21` to `w30`
 1. Install the modified ISAN.yolol from here on an Advanced Chip.  Set up the receivers fields and ISAN text screen name (`_`) per https://isan.to/isan.pdf. The Waypoint system doesnt care if you are mono or quad mode.  If quad mode, set pr=0 on line 1 to turn off precision.  
-###### NOTE: The isan.yolol in this folder is modified, do not use the vanilla ISAN. (Display and Reciever fields should be updated as shown in the PDF) ![ISAN-SCREEN](images/ISANScreen.jpg)
+`NOTE: The isan.yolol in this folder is modified, do not use the vanilla ISAN. (Display and Reciever fields should be updated as shown in the PDF)` ![ISAN-SCREEN](images/ISANScreen.jpg)
 1. Install ShipHeading.yolol on an advanced chip.  
     1. On a text screen, rename PanelValue field to `Heading`  ![HEADING](images/Heading.jpg)  This will show current live heading after its established.
 1. Install 30WPDTW.yolol on an advanced chip.  
