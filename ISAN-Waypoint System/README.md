@@ -78,7 +78,7 @@ You can install all or part of this system. These instructions assume you are in
 
 ![WP-Buttons](images/WPInc-DecButtons.jpg)  
 1. Install 1 button.  Rename ButtonState field name to `wpl`.  ButtonStyle should be 1 for this button.   This is the button you press after you find desired waypoint to send it to system for use.
-1. Install progress bar near buttons if needed to show currently selected waypoint. Name PanelValue to `wpn`.  Minvalue 0, maxvalue 30 (or your total number of waypoints).
+1. Install progress bar near buttons if needed to show currently selected waypoint. Name PanelValue to `wpn`.  Minvalue 1, maxvalue 30 (or your total number of waypoints). Set initial value to 1.
 1. (OPTIONAL) You can put SPD on any extra display you want to display just speed.  Currently displayed on ISAN panel and on Ships Heading panel.
 1. (STREAMERS) You can put `_` on a memory chip or other non-display device and the entire system will work without the ISAN text display.  Also the `wp` and `dest` values and screens can be done the same way.
 
