@@ -1,6 +1,6 @@
 i=:insideSafeZone :Safezone_B=i
 if i then :Safe_C=2 else :Safe_C=1 end
-if i then :Tran_C=2 a=0 else :Tran_C=1 a=1 end
+if i then :Tran_C=2 a=0 b=0 else :Tran_C=1 a=1 end
 if(not b)*a then :transponder=0 b=1 end
 if(not a)*b then a=0 end goto1
 
