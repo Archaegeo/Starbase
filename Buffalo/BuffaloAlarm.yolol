@@ -3,7 +3,7 @@ if:DurErr>0thenalarm=1 :SndT=8 alm="Durability" goto5elsealarm=0end
 if:FuelCheck<500thenalarm=1 :SndT=4 alm="Fuel" goto5elsealarm=0end
 if:Propellant<500thenalarm=1 :SndT=6 alm="Prop" goto5elsealarm=0end
 :SoundOn=0+alarm ifalarm then:RedLight=1-:RedLight else:Redlight=0end
-ifalarm!=1then:Info="\nWarpClass: "+:WarpClass goto1 end
+ifalarm!=1then:Info="\nStrengthFactor: "+:StrengthFactor goto1 end
 if alm=="Durability" then alm+=" "+:DurErr end :Info="\n"+alm goto 1
 
 
